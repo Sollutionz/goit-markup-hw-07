@@ -84,14 +84,9 @@
   border-radius: 4px;
   outline: none;
   transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.modal__input:focus {
-  border-color: var(--accent-color);
-}
-
-.modal__input:focus + .modal__icon {
-  fill: var(--accent-color);
+  &:focus {
+    border-color: var(--accent-color);
+  }
 }
 
 .modal__icon {
@@ -101,6 +96,9 @@
   top: 11px;
   left: 12px;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  .modal__input:focus + & {
+    fill: var(--accent-color);
+  }
 }
 
 .modal__feedback {
@@ -121,19 +119,18 @@
   color: rgba(117, 117, 117, 0.5);
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-}
+  &:focus {
+    border-color: var(--accent-color);
+  }
 
-.modal__feedback:focus {
-  border-color: var(--accent-color);
-}
-
-.modal__feedback::placeholder {
-  font-family: inherit;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.01em;
-  color: rgba(117, 117, 117, 0.5);
+  &::placeholder {
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+  }
 }
 
 .modal__check-label {
@@ -165,13 +162,12 @@
   border-radius: 2px;
   outline: none;
   transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.modal__check:checked + .modal__style-check {
-  fill: var(--accent-color);
-  background-color: #188ce8;
-  border-color: var(--accent-color);
-  background-origin: border-box;
+  .modal__check:checked + & {
+    fill: var(--accent-color);
+    background-color: #188ce8;
+    border-color: var(--accent-color);
+    background-origin: border-box;
+  }
 }
 
 .modal__polycy-text {

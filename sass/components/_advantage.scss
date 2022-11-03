@@ -5,10 +5,9 @@
 .advantage__list {
   display: flex;
   justify-content: space-evenly;
-}
-
-.advantage__list li:not(:last-child) {
-  margin-right: 30px;
+  & li:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 .advantage__bg {
