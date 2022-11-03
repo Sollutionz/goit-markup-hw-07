@@ -656,6 +656,7 @@ body {
 }
 
 .modal__possition {
+  display: block;
   position: relative;
 }
 
